@@ -7,75 +7,125 @@
     <title>Damjan Krstic</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #111;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
             color: white;
+            min-height: 100vh;
             padding: 40px;
-            max-width: 1000px;
+        }
+
+        .container {
+            max-width: 1100px;
             margin: auto;
         }
 
-        h1 {
-            color: #4da6ff;
-            font-size: 42px;
-            margin-bottom: 5px;
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
         }
 
-        .subtitle {
-            color: #bdbdbd;
-            margin-bottom: 30px;
+        .hero h1 {
+            font-size: 60px;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 20px;
         }
 
         .box {
-            background-color: #1e1e1e;
-            padding: 25px;
-            border-radius: 15px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
             margin-bottom: 25px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
         }
 
         h2 {
-            color: #4da6ff;
+            color: #38bdf8;
+            margin-bottom: 15px;
         }
 
-        a {
-            color: #4da6ff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+        p, li {
+            line-height: 1.8;
         }
 
         ul {
-            line-height: 1.8;
+            padding-left: 20px;
+        }
+
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #38bdf8;
+            color: black;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #94a3b8;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Damjan Krstic</h1>
-    <p class="subtitle">
-        IMS-Schüler | Informatik | Softwareentwicklung | Webentwicklung
-    </p>
+<div class="container">
+
+    <div class="hero">
+        <h1>Damjan Krstic</h1>
+        <p>IMS-Schüler | Informatik | Softwareentwicklung | Webentwicklung</p>
+    </div>
 
     <div class="box">
-        <h2>Über mich</h2>
+        <h2>👨‍💻 Über mich</h2>
 
         <p>
             Ich bin IMS-Schüler mit grossem Interesse an Informatik,
             Softwareentwicklung und Webentwicklung.
-            Besonders gerne arbeite ich an Projekten, löse Probleme
-            mit logischem Denken und erweitere mein technisches Wissen.
+            Besonders gerne entwickle ich Projekte, lerne neue Technologien
+            und löse Probleme mit logischem Denken.
         </p>
     </div>
 
     <div class="box">
-        <h2>Kontakt</h2>
+        <h2>📞 Kontakt</h2>
 
         <p>Email: dami020908@gmail.com</p>
+
         <p>
             GitHub:
             <a href="https://github.com/ModestDamjanShrimp764" target="_blank">
@@ -85,42 +135,47 @@
     </div>
 
     <div class="box">
-        <h2>Technische Fähigkeiten</h2>
+        <h2>⚡ Technische Fähigkeiten</h2>
+
+        <div class="skills">
+            <span class="skill">C#</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">GitHub</span>
+            <span class="skill">Microsoft Office</span>
+            <span class="skill">Problemlösung</span>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>🚀 Projekte</h2>
 
         <ul>
-            <li>C#</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>GitHub</li>
-            <li>Microsoft Office</li>
-            <li>Problemlösung und logisches Denken</li>
+            <li><strong>Casino Projekt</strong> – Konsolenanwendung mit verschiedenen Casinospielen.</li>
+
+            <li><strong>Mini GPT</strong> – Einfacher KI-Chatbot.</li>
+
+            <li><strong>Password/Nussknacker</strong> – Analyse von Passwortsicherheit.</li>
+
+            <li><strong>Games</strong> – Mehrere kleine Spiele mit C# entwickelt.</li>
+
+            <li><strong>Eigene Website</strong> – Portfolio mit HTML, CSS und GitHub Pages.</li>
         </ul>
     </div>
 
     <div class="box">
-        <h2>Projekte</h2>
+        <h2>📄 Lebenslauf</h2>
 
-        <ul>
-            <li><strong>Casino Projekt in C#</strong> – Konsolenanwendung mit verschiedenen Casinospielen.</li>
-
-            <li><strong>Mini GPT Projekt</strong> – Einfacher Chatbot mit KI-Funktionen.</li>
-
-            <li><strong>Password/Nussknacker Projekt</strong> – Analyse von Passwortsicherheit und Schutzmechanismen.</li>
-
-            <li><strong>Verschiedene Games</strong> – Mehrere kleine Spiele mit C# entwickelt.</li>
-
-            <li><strong>Eigene Website</strong> – Persönliche Website mit HTML, CSS und GitHub Pages veröffentlicht.</li>
-        </ul>
-    </div>
-
-    <div class="box">
-        <h2>CV</h2>
-
-        <a href="Bewerbungsdossier_DamjanKrstic.pdf" target="_blank">
-           CV Herunterladen
+        <a href="CV_Damjan_Krstic.pdf" target="_blank">
+            CV herunterladen
         </a>
     </div>
 
-</body>
+    <div class="footer">
+        © 2026 Damjan Krstic
+    </div>
 
+</div>
+
+</body>
 </html>
