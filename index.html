@@ -1,249 +1,102 @@
-```html
+outputs/index.html
+Vollständiger Dateiinhalt konnte nicht geladen werden
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Damjan Krstic | Bewerbungswebsite</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio von Damjan Krstic – IMS-Schüler mit Schwerpunkt Applikationsentwicklung EFZ auf der Suche nach einem Praktikum.">
+  <meta name="theme-color" content="#070b14">
+  <title>Damjan Krstic | Applikationsentwicklung</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Segoe UI,sans-serif;
-}
+  <style>
+    :root {
+      --bg: #070b14;
+      --bg-soft: #0a1120;
+      --surface: rgba(17, 27, 48, 0.64);
+      --surface-strong: rgba(20, 32, 56, 0.88);
+      --border: rgba(148, 180, 231, 0.13);
+      --border-hover: rgba(77, 150, 255, 0.42);
+      --text: #eef5ff;
+      --muted: #98a9c3;
+      --blue: #3b82f6;
+      --blue-light: #65a9ff;
+      --blue-deep: #155eef;
+      --cyan: #22d3ee;
+      --success: #5ee0a0;
+      --radius: 22px;
+      --radius-sm: 14px;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+      --max-width: 1160px;
+    }
 
-html{
-    scroll-behavior:smooth;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body{
-    background:#0f172a;
-    color:white;
-    line-height:1.6;
-}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 96px;
+    }
 
-header{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-    background:linear-gradient(135deg,#0f172a,#1e293b);
-}
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 11% 8%, rgba(29, 93, 205, 0.18), transparent 31rem),
+        radial-gradient(circle at 86% 30%, rgba(34, 211, 238, 0.08), transparent 30rem),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
 
-header h1{
-    font-size:4rem;
-    margin-bottom:15px;
-}
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      content: "";
+      opacity: 0.22;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, black, transparent 80%);
+    }
 
-header p{
-    max-width:700px;
-    color:#cbd5e1;
-    font-size:1.2rem;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:14px 28px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:bold;
-    transition:0.3s;
-}
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
 
-.btn:hover{
-    background:#1d4ed8;
-}
+    button {
+      color: inherit;
+      font: inherit;
+    }
 
-section{
-    padding:80px 10%;
-}
+    svg {
+      display: block;
+    }
 
-h2{
-    color:#60a5fa;
-    margin-bottom:25px;
-    font-size:2rem;
-}
+    ::selection {
+      color: #fff;
+      background: rgba(59, 130, 246, 0.62);
+    }
 
-.card{
-    background:#1e293b;
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:20px;
-}
+    .container {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin-inline: auto;
+    }
 
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-}
-
-.skill{
-    background:#2563eb;
-    padding:10px 15px;
-    border-radius:8px;
-}
-
-.project{
-    background:#1e293b;
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:20px;
-}
-
-.project h3{
-    margin-bottom:10px;
-}
-
-.contact a{
-    display:block;
-    color:#60a5fa;
-    text-decoration:none;
-    margin-top:10px;
-}
-
-footer{
-    text-align:center;
-    padding:40px;
-    color:#94a3b8;
-}
-
-.highlight{
-    color:#60a5fa;
-}
-</style>
-
-</head>
-<body>
-
-<header>
-
-<h1>Damjan Krstic</h1>
-
-<p>
-Motivierter IMS-Schüler mit Interesse an
-<span class="highlight">Softwareentwicklung</span>,
-<span class="highlight">Webentwicklung</span> und modernen Technologien.
-</p>
-
-<a href="#about" class="btn">Mehr über mich</a>
-
-</header>
-
-<section id="about">
-
-<h2>Über mich</h2>
-
-<div class="card">
-<p>
-Ich besuche die Informatikmittelschule an der Alten Kantonsschule Aarau
-mit Schwerpunkt Applikationsentwicklung. Während meiner Ausbildung arbeite
-ich regelmässig mit Programmiersprachen, Datenbanken und Webtechnologien.
-Besonders interessieren mich Softwareentwicklung, Webentwicklung und die
-Umsetzung praktischer Projekte. Für mein Praktikum suche ich die Möglichkeit,
-mein Wissen in einem Unternehmen anzuwenden und weiterzuentwickeln.
-</p>
-</div>
-
-</section>
-
-<section>
-
-<h2>Ausbildung</h2>
-
-<div class="card">
-<h3>Informatikmittelschule Aarau (IMS)</h3>
-<p>Seit 2024</p>
-<p>Schwerpunkt Applikationsentwicklung EFZ</p>
-</div>
-
-</section>
-
-<section>
-
-<h2>Fähigkeiten</h2>
-
-<div class="skills">
-<div class="skill">C#</div>
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">JavaScript</div>
-<div class="skill">SQL</div>
-<div class="skill">Git</div>
-<div class="skill">GitHub</div>
-<div class="skill">Docker</div>
-</div>
-
-</section>
-
-<section>
-
-<h2>Projekte</h2>
-
-<div class="project">
-<h3>REST API Projekt</h3>
-<p>
-Entwicklung einer REST API mit ASP.NET Core und SQL Server.
-Dabei wurden Endpunkte erstellt, Daten gespeichert und mit
-einer Datenbank verbunden. Das Projekt hat mir einen Einblick
-in Backend-Entwicklung und Datenbankarbeit gegeben.
-</p>
-</div>
-
-<div class="project">
-<h3>ToDo SPA</h3>
-<p>
-Entwicklung einer Single Page Application mit Routing,
-Login und CRUD-Funktionen. Benutzer können Aufgaben erstellen,
-bearbeiten und löschen. Dabei konnte ich meine Kenntnisse
-in JavaScript und Webentwicklung vertiefen.
-</p>
-</div>
-
-<div class="project">
-<h3>Portfolio Website</h3>
-<p>
-Entwicklung einer responsiven Website mit HTML, CSS und
-JavaScript. Die Website dient zur Präsentation meiner Projekte
-und Fähigkeiten im Rahmen meiner Praktikumsbewerbung.
-</p>
-</div>
-
-</section>
-
-<section>
-
-<h2>Kontakt</h2>
-
-<div class="card contact">
-
-<a href="https://github.com/ModestDamjanShrimp764" target="_blank">
-GitHub Profil
-</a>
-
-<a href="https://www.linkedin.com/in/damjan-krstic-83437932b" target="_blank">
-LinkedIn Profil
-</a>
-
-<a href="mailto:D.Krstic.inf24@stud.bbbaden.ch">
-E-Mail senden
-</a>
-
-</div>
-
-</section>
-
-<footer>
-<p>© 2026 Damjan Krstic</p>
-</footer>
-
-</body>
-</html>
-```
+    .skip-link {
+      position: fixed;
+      top: 12px;
